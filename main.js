@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   var arr = [];
-  arr.toAppend = 0; //number to append
+  arr.appendCounter = 0; //number to append
   arr.nLoops = 0; // count number of total loops
   var $resolvedUl = $('.resolved').find('ul');
 
@@ -15,26 +15,26 @@ $(document).ready(function() {
       for (i = 0; i < arr.length; i++) { // loop over array of currently displayed items
 
         arr.nLoops++;
-        if (arr.toAppend == arr[i]) {
+        if (arr.appendCounter == arr[i]) {
 
           arr.found = true;
           break;
         };
       }; // end of for loop
-      if (arr.toAppend == 9) { // count total loops
+      if (arr.appendCounter == 9) { // count total loops
         console.log('Total number of loops: ' + arr.nLoops)
       }
       if (arr.found == true) { // if match found, append number and reiterate
         arr.found = false;
-        var index = arr.indexOf(arr.toAppend);
+        var index = arr.indexOf(arr.appendCounter);
         console.log('The current array: ' + arr)
         console.log(arr[i] + ' in array to be spliced at index: ' + index)
         arr.splice(index, 1); // remove item from array after it has been found - reduces total number of literations
 
-        $resolvedUl.append('<li>' + (arr.toAppend) + ' is ready</li>'); // append number if item is first or previous are ready
-        console.log((arr.toAppend) + ' has been appended ----------------')
-        arr.toAppend++;;
-        if (arr.toAppend < 10) {
+        $resolvedUl.append('<li>' + (arr.appendCounter) + ' is ready</li>'); // append number if item is first or previous are ready
+        console.log((arr.appendCounter) + ' has been appended ----------------')
+        arr.appendCounter++;;
+        if (arr.appendCounter < 10) {
           console.log('loops counted: ' + arr.nLoops)
           loopAndAppend();
         }
