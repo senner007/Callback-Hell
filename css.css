@@ -1,0 +1,38 @@
+li {
+  font-size: 25px;
+  list-style: none;
+  margin: 20px;
+  color: ghostWhite;
+}
+
+
+.Blue {
+  background-color: Blue;
+}
+.BlueViolet {
+  background-color: BlueViolet;
+}
+.Brown {
+  background-color: Brown;
+}
+.BurlyWood {
+  background-color: BurlyWood;
+}
+.CadetBlue {
+  background-color: CadetBlue;
+}
+.Chartreuse {
+  background-color: Chartreuse;
+}
+.Chocolate {
+  background-color: Chocolate;
+}
+.Coral {
+  background-color: Coral;
+}
+.CornflowerBlue {
+  background-color: CornflowerBlue;
+}
+.Cornsilk {
+  background-color: Cornsilk;
+}
