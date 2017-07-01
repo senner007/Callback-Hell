@@ -8,9 +8,9 @@ $(document).ready(function() {
     arr.push(key);
 
 
-    loopOverArr();
+    loopAndAppend();
 
-    function loopOverArr() {
+    function loopAndAppend() {
       arr.found = false;
       for (i = 0; i < arr.length; i++) {  // loop over array of currently displayed items
 
@@ -35,13 +35,13 @@ $(document).ready(function() {
         console.log((counter -1) + ' has been appended ----------------')
         if (counter < 10) {
           console.log('loops counted: ' + nLoops)
-          loopOverArr();
+          loopAndAppend();
         }
       }
 
-    };
+    }; // end of loopAndAppend function
 
-  }
+  }; // end of callback function
 
   $('li').each(function(key, value) {
     var newRandom = Math.floor((Math.random() * 2000) + 1); // set a new random number
