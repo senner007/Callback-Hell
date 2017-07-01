@@ -21,18 +21,19 @@ $(document).ready(function() {
         };
       }; // end of for loop
       if (counter == 10) { // count total loops
-        console.log('number of loops: ' + nLoops)
+        console.log('Total number of loops: ' + nLoops)
       }
       if (flag == true) { // if match found, append number and reiterate
         flag = false;
         var index = arr.indexOf(counter-1); // remove item from array after it has been found - reduces total number of literations
-        console.log('the current array: '+  arr)
+        console.log('The current array: '+  arr)
         console.log(arr[i] + ' in array to be spliced at index: ' + index)
          arr.splice(index, 1);
 
         $resolvedUl.append('<li>' + (counter - 1) + ' is ready</li>'); // append number if item is first or previous are ready
-        console.log((counter -1) + ' has been appended')
+        console.log((counter -1) + ' has been appended ----------------')
         if (counter < 10) {
+          console.log('loops counted: ' + nLoops)
           loopOverArr();
         }
       }
