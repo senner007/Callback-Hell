@@ -9,8 +9,14 @@
 </head>
 
 <body>
+	<p>Callback Hell</p>
+
+	<p>Each colored item will display itself after a random delay.
+		The item can then be used but only if it is the first element or if all the previous items have been displayed</p>
+
+
 	<div class="container">
-		<ul>
+		<ul class='first'>
 			<li class='Blue'>Blue</li>
 			<li class='BlueViolet'>BlueViolet</li>
 			<li class='Brown'>Brown</li>
@@ -20,11 +26,18 @@
 			<li class='Chocolate'>Chocolate</li>
 			<li class='Coral'>Coral</li>
 			<li class='CornflowerBlue'>CornflowerBlue</li>
-			<li class='Cornsilk'>Cornsilk</li> 
+			<li class='Cornsilk'>Cornsilk</li>
+		</ul>
+
+	</div>
+	<div class="resolved">
+		<ul class="second">
+
 		</ul>
 
 	</div>
 	<script type="text/javascript" src="jquery-3.2.1.slim.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>

@@ -1,8 +1,19 @@
-li {
-  font-size: 25px;
+.first li {
+  font-size: 15px;
   list-style: none;
-  margin: 20px;
+  padding: 5px;
+  margin: 10px;
   color: ghostWhite;
+  opacity: 0;
+
+}
+.second li {
+  font-size: 15px;
+  list-style: none;
+  margin: 5px;
+  color: black;
+  opacity: 1;
+
 }
 
 
