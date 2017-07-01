@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     function loopOverArr() {
       var flag = false;
-      for (i = 0; i < arr.length; i++) {
+      for (i = 0; i < arr.length; i++) {  // loop over array of currently displayed items
         console.log('new loop');
         nLoops++;
         if (counter == arr[i]) {
@@ -26,7 +26,7 @@ $(document).ready(function() {
       }
       if (flag == true) { // if match found, append number and reiterate
         flag = false;
-        $resolvedUl.append('<li>' + (counter - 1) + ' is ready</li>');
+        $resolvedUl.append('<li>' + (counter - 1) + ' is ready</li>'); // append number if item is first or previous are ready
         console.log('after append')
         if (counter < 10) {
           loopOverArr();
@@ -38,10 +38,10 @@ $(document).ready(function() {
   }
 
   $('li').each(function(key, value) {
-    var newRandom = Math.floor((Math.random() * 5000) + 1);
-    setTimeout(function() {
+    var newRandom = Math.floor((Math.random() * 5000) + 1); // set a new random number
+    setTimeout(function() { // wait random time and then display item
       $(value).css('opacity', 1)
-      callback(key);
+      callback(key); // once displayed, fire callback
     }, newRandom)
   });
 
