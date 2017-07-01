@@ -43,7 +43,7 @@ var count = 0;
   }
 
   $('li').each(function(key, value) {
-    var newRandom = Math.floor((Math.random() * 5000) + 1); // set a new random number
+    var newRandom = Math.floor((Math.random() * 500) + 1); // set a new random number
     setTimeout(function() { // wait random time and then display item
       $(value).css('opacity', 1)
       callback(key); // once displayed, fire callback
