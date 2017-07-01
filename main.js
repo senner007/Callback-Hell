@@ -11,7 +11,7 @@ $(document).ready(function() {
     loopAndAppend();
 
     function loopAndAppend() {
-      arr.found = false;
+      arr.found = false; // flag to determine if item was found
       for (i = 0; i < arr.length; i++) {  // loop over array of currently displayed items
 
         arr.nLoops++;
