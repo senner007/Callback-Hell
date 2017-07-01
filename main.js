@@ -4,7 +4,6 @@ $(document).ready(function() {
   var counter = 0;
   var $resolvedUl = $('.resolved').find('ul');
   var nLoops = 0; // count number of total loops
-var count = 0;
   function callback(key) {
     arr.push(key);
 
@@ -32,7 +31,7 @@ var count = 0;
          arr.splice(index, 1);
 
         $resolvedUl.append('<li>' + (counter - 1) + ' is ready</li>'); // append number if item is first or previous are ready
-        console.log('after append')
+        console.log((counter -1) + ' has been appended')
         if (counter < 10) {
           loopOverArr();
         }
