@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
   var arr = [];
-  arr.toAppend = 0;
+  arr.toAppend = 0; //number to append
+  arr.nLoops = 0; // count number of total loops
   var $resolvedUl = $('.resolved').find('ul');
-  var nLoops = 0; // count number of total loops
   function callback(key) {
     arr.push(key);
 
@@ -14,7 +14,7 @@ $(document).ready(function() {
       arr.found = false;
       for (i = 0; i < arr.length; i++) {  // loop over array of currently displayed items
 
-        nLoops++;
+        arr.nLoops++;
         if (arr.toAppend == arr[i]) {
 
           arr.found = true;
@@ -22,7 +22,7 @@ $(document).ready(function() {
         };
       }; // end of for loop
       if (arr.toAppend == 9) { // count total loops
-        console.log('Total number of loops: ' + nLoops)
+        console.log('Total number of loops: ' + arr.nLoops)
       }
       if (arr.found == true) { // if match found, append number and reiterate
         arr.found = false;
@@ -35,7 +35,7 @@ $(document).ready(function() {
         console.log((arr.toAppend) + ' has been appended ----------------')
         arr.toAppend = arr.toAppend + 1;
         if (arr.toAppend < 10) {
-          console.log('loops counted: ' + nLoops)
+          console.log('loops counted: ' + arr.nLoops)
           loopAndAppend();
         }
       }
