@@ -1,5 +1,8 @@
 Each colored item will display itself after a random delay. The item can then be used but only if it is the first item or if all the previous items have been displayed
 
+Todo:
++Refactor using ES6 array.find and avoid looping. Test speed.
+
 Code removed in jquery.slim.js:
 
 jQuery.fn.extend
